@@ -28,6 +28,7 @@ class ClientTest(unittest.TestCase):
                                                    (quote['top_bid']['price'] + quote['top_ask']['price']) / 2))
 
     """ ------------ Add more unit tests ------------ """
+
     def test_getRatio(self):
         prices = [127.06, 128.23, 133.08, 129.54, 137.31, 135.36, 136.57, 127.645]
         for i in range(0, len(prices), 2):
@@ -36,6 +37,7 @@ class ClientTest(unittest.TestCase):
 
     def test_getRatio_zeroDivision(self):
         self.assertIsNone(getRatio(1, 0))
+
 
 if __name__ == '__main__':
     unittest.main()
